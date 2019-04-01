@@ -35,6 +35,7 @@ RUN apt-get update ; \
     php7.2-mysql \
     libmysqlclient-dev \
     mysql-client \
+    imagemagick \
     mailutils \
     net-tools
 
