@@ -4,11 +4,14 @@ if [ 1 -eq ${IS_CRON:-0} ]
 then
 
   crontab -u www-data crontab.file
-
   /usr/sbin/cron -f
 
-else 
+elif [ 1 -eq ${IS_SUPERVISOR:-0} ]
+then
 
+  /usr/bin/supervisord --nodaemon -c /etc/supervisor/supervisord.conf
+
+else
   /usr/sbin/php-fpm7.2 -F
 
 fi

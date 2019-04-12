@@ -38,7 +38,8 @@ RUN apt-get update ; \
     mysql-client \
     imagemagick \
     mailutils \
-    net-tools
+    net-tools \
+    supervisor
 
 # Install PHP mcyrpt module
 RUN apt install php-dev libmcrypt-dev gcc make autoconf libc-dev pkg-config -y
@@ -57,7 +58,7 @@ RUN mkdir -p /app
 RUN chown -R www-data:www-data /app
 
 ADD conf/php/www.conf /etc/php/7.2/fpm/pool.d/www.conf
-
+ADD conf/supervisord.conf /etc/supervisor/supervisord.conf
 
 
 # Enable www-data user shell
