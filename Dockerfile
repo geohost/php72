@@ -52,7 +52,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Copy php.ini file
 ADD conf/php/php.ini /etc/php/7.2/fpm/php.ini
-RUN mkdir -p /var/log/php && touch /var/log/php/php-error.log && chown -R www-data:www-data /var/log/php
+RUN mkdir -p /var/log/php
+RUN touch /var/log/php/php-error.log && chown -R www-data:www-data /var/log/php
 
 #Create docroot directory , copy code and Grant Permission to docroot
 RUN mkdir -p /app
