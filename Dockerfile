@@ -33,6 +33,7 @@ RUN apt-get update ; \
     php7.2-cgi \
     php7.2-xml \
     php7.2-mysql \
+    php7.2-pgsql \
     php7.2-imagick \
     libmysqlclient-dev \
     mysql-client \
