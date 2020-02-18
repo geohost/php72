@@ -35,6 +35,7 @@ RUN apt-get update ; \
     php7.2-mysql \
     php7.2-pgsql \
     php7.2-imagick \
+    php7.2-soap \
     libmysqlclient-dev \
     mysql-client \
     imagemagick \
